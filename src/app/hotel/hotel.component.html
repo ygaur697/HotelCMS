@@ -1,0 +1,18 @@
+<ul class="hotels">
+  <li *ngFor="let Hotel of hotels">
+    <a routerLink="/detail/{{Hotel.name}}">
+      <span class="badge">Hotel
+        Name:{{Hotel.name}}</span>City:{{Hotel.city}}
+    </a>
+  </li>
+</ul>
+<div>
+  <label>Hotel name:
+    <input #hotelName />
+  </label>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(hotelName.value); hotelName.value=''">
+    add
+  </button>
+</div>

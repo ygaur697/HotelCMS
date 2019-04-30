@@ -1,0 +1,13 @@
+<div *ngIf="hotel">
+  <h2>{{hotel.name}} Details</h2>
+
+  <div><span>City: </span>{{hotel.city}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hotel.name" placeholder="name" />
+    </label>
+  </div>
+</div>
+
+<button (click)="goBack()">go back</button>
+<button (click)="save()">save</button>
